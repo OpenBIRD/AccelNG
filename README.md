@@ -26,13 +26,13 @@ Gigabyte NIC, 4 core CPU, 4G RAM and 64-bits Linux
 
 Download the source code：
 ```
-    git clone https://github.com/DNSPod/dnspod-sr.git
+    git clone https://github.com/FasterApple/AccelNG.git
     cd dnspod-sr
 ```
 
 Or：
 ```
-    https://github.com/DNSPod/dnspod-sr/zipball/master
+    https://github.com/FasterApple/AccelNG/archive/master.zip
 ```
 
 Compile the source code：
