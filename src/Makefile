@@ -1,12 +1,10 @@
-# @author     dilfish (zhangpu@dnspod.com)
-# @version    0.1
-PREFIX?=/usr/local/services/dnspod-sr
+PREFIX?=/usr/local/accelng
 INSTALL_BIN=$(PREFIX)/bin
 INSTALL_ETC=$(PREFIX)/etc
 OBJS=utils.o datas.o net.o storage.o dns.o io.o event.o author.o init.o update.o control.o memory.o
 LD=-lm -lc
 CC = gcc
-SERVER_NAME=dnspod-sr
+SERVER_NAME=accelng
 
 
 # ifeq (${T},g)
@@ -56,5 +54,5 @@ uninstall:
 
 .PHONY : clean
 clean:
-	rm -f $(OBJS) dnspod-sr
+	rm -f $(OBJS) accelng
 
