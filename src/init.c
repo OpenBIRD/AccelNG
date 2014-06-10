@@ -144,7 +144,7 @@ create_author(struct server *s, int n)
         CPU_SET_S(i + FETCHER_NUM + 1, sizeof(cpuinfo), &cpuinfo);
         if(0 != pthread_setaffinity_np(apt[i], sizeof(cpu_set_t), &cpuinfo))
         {
-            printf("set affinity quizzer failed, may be the cpu cores num less than (FETCHER_NUM + QUIZZER_NUM + 1)\n");
+            printf("set affinity quizzer failed, may be the cpu core num less than (FETCHER_NUM + QUIZZER_NUM + 1)\n");
 //             exit(0);
         }
     }
@@ -197,7 +197,7 @@ create_fetcher(struct server *s, int n)
         CPU_SET_S(i + 1, sizeof(cpuinfo), &cpuinfo);
         if(0 != pthread_setaffinity_np(fpt[i], sizeof(cpu_set_t), &cpuinfo))
         {
-            printf("set affinity fetcher failed,  may be the cpu cores num less than (FETCHER_NUM + QUIZZER_NUM + 1)\n");
+            printf("set affinity fetcher failed,  may be the cpu core num less than (FETCHER_NUM + QUIZZER_NUM + 1)\n");
 //             exit(0);
         }
     }
@@ -301,7 +301,7 @@ sanity_test(int exi)
 int
 print_basic_debug(void)
 {
-    printf("[DBG:] dnspod-sr is successful running now!!\n");
+    printf("[DBG:] AccelNG is successful running now!!\n");
     printf("[DBG:] max_ele_size is %u - 1808\n", MAX_ELE_NUM);
     printf("[DBG:] server may contain %u useful records\n",
             (MAX_ELE_NUM - 1808) / 3);
@@ -316,7 +316,7 @@ print_basic_debug(void)
 void
 help(const char *progname)
 {
-    printf("DNSPod recursive dns server\n");
+    printf("FasterApple recursive dns server\n");
     printf("version 0.01\n");
     printf("Usage: %s [-c config]\n", progname);
 }
@@ -388,7 +388,7 @@ main(int argc, char **argv)
                 exit(0);
                 break;
             case 'v':
-                printf("dnspod-sr 0.01\n");
+                printf("AccelNG 0.01\n");
                 exit(0);
                 break;
             default:
