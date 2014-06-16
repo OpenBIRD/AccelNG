@@ -48,7 +48,7 @@ Run
 
 For more details, please see [INSTALL.md](./INSTALL.md).
 
-#License
+#LICENSE
 
 [dnspod/dnspod-sr](https://github.com/DNSPod/dnspod-sr) is released under BSD license, please see [LICENSE](./LICENSE) for details.
 
