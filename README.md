@@ -26,13 +26,13 @@ Gigabyte NIC, 4 core CPU, 4G RAM and 64-bits Linux
 
 Download the source code：
 ```
-    git clone https://github.com/FasterApple/AccelNG.git
+    git clone https://github.com/OpenBIRD/AccelNG.git
     cd dnspod-sr
 ```
 
 Or：
 ```
-    https://github.com/FasterApple/AccelNG/archive/master.zip
+    https://github.com/OpenBIRD/AccelNG/archive/master.zip
 ```
 
 Compile the source code：
