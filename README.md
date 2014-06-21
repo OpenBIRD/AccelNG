@@ -43,7 +43,7 @@ Compile the source code：
 
 Run
 ```
-    ./dnspod-sr
+    ./accelng
 ```
 
 For more details, please see [INSTALL.md](./INSTALL.md).
