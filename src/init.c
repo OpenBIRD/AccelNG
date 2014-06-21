@@ -431,6 +431,7 @@ main(int argc, char **argv)
         dns_error(0, "recv update thread error");
     }
     read_root(s->datasets, s->ttlexp);
+    refresh_records(s->datasets, s->ttlexp);
     print_basic_debug();
     global_serv = s;
     run_sentinel(s);
