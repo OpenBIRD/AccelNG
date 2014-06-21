@@ -9,7 +9,7 @@
 ## Configurations
 The default config file is ```sr.conf``` under the same directory. Another file can be provided at the start up.
 ```
-    ./dnspod-sr /path/of/sr.conf
+    ./accelng /path/of/sr.conf
 ```
 
 Currently the config file supports specifying DNS server for domains. 
