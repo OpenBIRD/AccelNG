@@ -10,11 +10,10 @@ The goal of the project is to provide a faster and safer DNS service in China. W
 
 ##Hardware Requirements
 
-**
-Minimum: 3 Core CPU, 2G RAM (Linux)
 
-Recommended: 4 Core CPU, 4G RAM (Linux)
-**
+**Minimum: 3 Core CPU, 2G RAM (Linux)**
+
+**Recommended: 4 Core CPU, 4G RAM (Linux)**
 
 AccelNG may crash frequently running on servers that do not meet the minimum requirements.
 
