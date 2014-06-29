@@ -8,6 +8,16 @@ AccelNG is a DNS recursive server built base on [dnspod-sr](https://github.com/D
 
 The goal of the project is to provide a faster and safer DNS service in China. We are trying to eliminate DNS corruption and provide the users the best Internet experience.
 
+##Hardware Requirements
+
+**
+Minimum: 3 Core CPU, 2G RAM (Linux)
+
+Recommended: 4 Core CPU, 4G RAM (Linux)
+**
+
+AccelNG may crash frequently running on servers that do not meet the minimum requirements.
+
 ##Performance
 
 ###Testing Environment:
