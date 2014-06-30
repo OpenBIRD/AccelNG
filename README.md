@@ -23,7 +23,7 @@ AccelNG may crash frequently running on servers that do not meet the minimum req
 
 Gigabyte NIC, 4 core CPU, 4G RAM and 64-bits Linux
 
-### Result:
+### Results:
 
 - AccelNG: 150k qps
 - BIND 9.9: 70k qps
