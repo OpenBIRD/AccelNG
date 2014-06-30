@@ -303,11 +303,11 @@ print_basic_debug(void)
 {
     printf("[DBG:] AccelNG is successful running now!!\n");
     printf("[DBG:] max_ele_size is %u - 1808\n", MAX_ELE_NUM);
-    printf("[DBG:] server may contain %u useful records\n",
+    printf("[DBG:] Server may contain %u useful records\n",
             (MAX_ELE_NUM - 1808) / 3);
     printf("[DBG:] hash_table_size is %u\n", HASH_TABLE_SIZE);
-    printf("[DBG:] we have %u hash tables\n", MULTI_HASH);
-    printf("[DBG:] we have %u fetchers,%u quizzers\n", FETCHER_NUM,
+    printf("[DBG:] We have %u hash tables\n", MULTI_HASH);
+    printf("[DBG:] We have %u fetchers,%u quizzers\n", FETCHER_NUM,
             QUIZZER_NUM);
     return 0;
 }
@@ -407,17 +407,17 @@ main(int argc, char **argv)
     s = server_init();
     s->is_forward = is_forward;
     read_config(config, (char *)s->logpath, s->forward, g_nameservers);
-    // add default dns server 8.8.8.8, 114.114.114.114
+    // add default dns server
     if (g_nameservers[0] == NULL) {
         assert(g_nameservers[1] == NULL);
-        g_nameservers[0] = strdup("8.8.8.8");
-        g_nameservers[1] = strdup("8.8.4.4");
+        g_nameservers[0] = strdup("89.233.43.71");
+        g_nameservers[1] = strdup("89.104.194.142");
     }
     if (g_nameservers[1] == NULL) {
-        if (strcmp(g_nameservers[0], "8.8.8.8") == 0) {
-            g_nameservers[1] = strdup("8.8.4.4");
+        if (strcmp(g_nameservers[0], "89.233.43.71") == 0) {
+            g_nameservers[1] = strdup("89.104.194.142");
         } else {
-            g_nameservers[1] = strdup("8.8.8.8");
+            g_nameservers[1] = strdup("89.233.43.71");
         }
     }
     //
@@ -430,8 +430,8 @@ main(int argc, char **argv)
     if (pthread_create(&ctl, NULL, (void *)recv_update, s) != 0) {
         dns_error(0, "recv update thread error");
     }
-    read_root(s->datasets, s->ttlexp);
-    refresh_records(s->datasets, s->ttlexp);
+    read_root(s->datasets, s->ttlexp); // read root.z
+    refresh_records(s->datasets, s->ttlexp); // read records.z
     print_basic_debug();
     global_serv = s;
     run_sentinel(s);
